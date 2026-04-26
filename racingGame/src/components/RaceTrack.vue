@@ -105,38 +105,56 @@ function horseLabel(horseId: number) {
 </template>
 
 <style scoped>
+h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
 .placeholder {
-  color: #777;
+  color: #64748b;
   font-style: italic;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
 }
 .track {
   position: relative;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
   background: repeating-linear-gradient(
     0deg,
-    #f8f8f8,
-    #f8f8f8 24px,
-    #f1f1f1 24px,
-    #f1f1f1 48px
+    #1a4a2e,
+    #1a4a2e 24px,
+    #15402a 24px,
+    #15402a 48px
   );
-  padding: 16px;
+  padding: 8px 16px 8px 8px;
   overflow: hidden;
+  box-shadow:
+    inset 0 2px 16px rgba(0, 0, 0, 0.4),
+    0 4px 16px rgba(0, 0, 0, 0.3);
 }
 .lane {
   display: grid;
-  /* Fix label column width so track length is constant and not affected by name length */
   grid-template-columns: 1fr 140px;
   align-items: center;
   gap: 8px;
   height: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.lane:last-child {
+  border-bottom: none;
 }
 .horse {
-  height: 24px;
-  border-radius: 12px;
+  height: 26px;
+  border-radius: 13px;
   position: relative;
   background-clip: padding-box;
   padding: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 .horse .sprite {
   position: absolute;
@@ -145,21 +163,25 @@ function horseLabel(horseId: number) {
   height: 100%;
   width: auto;
   aspect-ratio: 1 / 1;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5)) brightness(1.1);
 }
 .label {
-  font-size: 0.85rem;
-  color: #333;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
   justify-self: end;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-weight: 500;
 }
 .finish {
   position: absolute;
   right: 8px;
-  top: 8px;
-  font-size: 0.8rem;
-  color: #555;
+  top: 6px;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 </style>

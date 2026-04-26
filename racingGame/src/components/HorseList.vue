@@ -28,42 +28,62 @@ const horsesSorted = computed<Horse[]>(() => {
 </template>
 
 <style scoped>
+h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #94a3b8;
+  margin-bottom: 0.625rem;
+}
 .list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4px;
+  gap: 5px;
   max-height: 420px;
   overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.15) transparent;
 }
 li {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 4px 6px;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  background: white;
+  gap: 10px;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: background 0.15s, border-color 0.15s;
+}
+li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 .rank {
   width: 2ch;
   text-align: right;
-  color: #666;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 .swatch {
   width: 14px;
   height: 14px;
-  border-radius: 3px;
-  border: 1px solid #ddd;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
 }
 .name {
   font-weight: 600;
+  font-size: 0.875rem;
+  color: #e2e8f0;
 }
 .cond {
   margin-left: auto;
-  color: #666;
-  font-size: 0.85rem;
+  color: #64748b;
+  font-size: 0.8rem;
 }
 </style>

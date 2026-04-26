@@ -35,37 +35,70 @@ function horseName(id: number) {
 </template>
 
 <style scoped>
+h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
 .placeholder {
-  color: #777;
+  color: #64748b;
   font-style: italic;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
 }
 .round {
-  border: 1px solid #eee;
-  border-radius: 6px;
-  padding: 8px;
-  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.04);
   margin-bottom: 8px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.round:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.13);
 }
 .round-header {
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  color: #f5a623;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 .rank {
   margin: 0;
-  padding-left: 1rem;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.rank li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
 }
 .position {
   width: 2ch;
   display: inline-block;
-  color: #666;
+  color: #475569;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 .name {
   font-weight: 600;
-  margin-left: 4px;
+  color: #e2e8f0;
 }
 .time {
-  margin-left: 8px;
-  color: #555;
+  margin-left: auto;
+  color: #64748b;
+  font-size: 0.8rem;
   font-variant-numeric: tabular-nums;
 }
 </style>

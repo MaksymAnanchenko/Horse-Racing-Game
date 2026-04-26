@@ -110,61 +110,88 @@ watch(anim, (a) => {
 .panel {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.875rem;
 }
 .row {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 .start-row {
   margin-top: 0.25rem;
+  gap: 0.75rem;
 }
 .btn {
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 0.5rem 0.875rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
-  background: white;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+.btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.28);
 }
 .btn.primary {
-  background: #2b7cff;
+  background: linear-gradient(135deg, #f5a623 0%, #e94560 100%);
   color: white;
-  border-color: #2b7cff;
+  border: none;
+}
+.btn.primary:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
 }
 .btn-large {
-  font-size: 1.1rem;
-  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  padding: 0.625rem 1.5rem;
   font-weight: 700;
-  border-width: 2px;
+  border-radius: 10px;
 }
 .btn.primary.btn-large {
-  box-shadow: 0 2px 8px rgba(43, 124, 255, 0.4);
-}
-.btn-large:not(:disabled):hover {
-  filter: brightness(1.03);
+  box-shadow: 0 4px 20px rgba(233, 69, 96, 0.45);
 }
 .btn:disabled {
-  opacity: 0.6;
+  opacity: 0.35;
   cursor: not-allowed;
 }
 .label {
-  font-size: 0.9rem;
-  color: #444;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  font-weight: 500;
 }
 .input {
   width: 80px;
-  padding: 4px 6px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 5px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.input:focus {
+  border-color: #f5a623;
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.2);
 }
 .hint {
-  color: #777;
+  color: #64748b;
+  font-size: 0.8rem;
 }
 .meta {
   display: flex;
   gap: 1rem;
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+.meta strong {
+  color: #f5a623;
 }
 </style>
