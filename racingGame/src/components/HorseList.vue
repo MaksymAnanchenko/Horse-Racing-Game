@@ -43,10 +43,10 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 5px;
-  max-height: 420px;
+  max-height: 422px;
   overflow: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.15) transparent;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
 }
 li {
   display: flex;
@@ -56,7 +56,9 @@ li {
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.04);
-  transition: background 0.15s, border-color 0.15s;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
 }
 li:hover {
   background: rgba(255, 255, 255, 0.08);
